@@ -1,0 +1,96 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #333;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  input,
+  button {
+    color: white;
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+
+  input:focus,
+  button:focus {
+    outline: none;
+  }
+
+  input:hover,
+  button:hover {
+    transform: scale(1.1);
+  }
+
+  button:active {
+    transform: scale(0.9);
+  }
+
+  h1 {
+    color: #777;
+    font-size: 36px;
+    text-align: center;
+  }
+
+  #deathReason {
+    font-size: 18px;
+    text-align: center;
+    color: #bbb;
+    margin-top: -3vh;
+    margin-bottom: 1vh;
+  }
+
+  @keyframes pisca {
+    to {
+      box-shadow: 0px 0px 10px #777;
+    }
+    from {
+      box-shadow: 0px 0px 20px #777;
+    }
+  }
+
+  @keyframes despisca {
+    to {
+      box-shadow: 0px 0px 20px #777;
+    }
+    from {
+      box-shadow: 0px 0px 10px;
+    }
+  }
+
+  .caixa {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 50vw;
+    height: 30vh;
+    background-color: darkred;
+    color: #eee;
+    padding: 20px;
+    box-shadow: 0px 0px 7px #777;
+    border-radius: 15px;
+    animation: despisca .5s forwards;
+  }
+
+  .caixa:hover {
+    animation: pisca .7s alternate infinite forwards;
+  }
+
+  #caveira {
+    position: absolute;
+    z-index: -1;
+    width: 50%;
+    height: auto;
+  }

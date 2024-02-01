@@ -1,0 +1,124 @@
+/* reset css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+body {
+    background-color: #18181b;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 24px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.container {
+    max-width: 480px;
+    margin: 14px 0;
+}
+
+.container span {
+    color: #ffffff;
+    font-size: 22px;
+    text-align: center;
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #dfdfdf;
+    height: 18px;
+    outline: none;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+#btn-gerar {
+    height: 40px;
+    background-color: #3eb72b;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 40px;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 20px;
+    transition: transform .5s ease;
+}
+
+#btn-gerar:hover {
+    transform: scale(1.1);
+}
+
+#btn-gerar:active {
+    transform: scale(.9);
+}
+
+.container-senha {
+    max-width: 480px;
+    margin: 14px 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.senha {
+    height: 60px;
+    background-color: rgba(0, 0, 0, .40);
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    border: 1px solid #313131;
+    transition: transform .5s ease;
+}
+
+.senha:hover {
+    transform: scale(1.2);
+}
+
+.senha:active {
+    transform: scale(.9);
+}
+
+.tooltip {
+    color: #ffffff;
+    position: relative;
+    top: 20px;
+    padding: 6px 8px;
+    background-color: #0f0f0f;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 6px;
+    visibility: hidden;
+    opacity: 0;
+    transition: all .5s ease-in-out;
+}
+
+.container-senha:hover .tooltip {
+    visibility: visible;
+    bottom: 50px;
+    opacity: 1;
+}
+
+/* javascript */
+
+.esconder {
+    display: none;
+}
