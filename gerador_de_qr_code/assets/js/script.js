@@ -1,3 +1,5 @@
+// adquirindo elementos
+
 const download = document.querySelector(".download");
 const dark = document.querySelector(".dark");
 const light = document.querySelector(".light");
@@ -85,4 +87,5 @@ function resolveDataUrl() {
         }, 50);
     });
 }
+
 generateQRCode();
