@@ -7,4 +7,4 @@ Esse projeto foi feito inspirado pelo famoso Idle Game Cookie Clicker da desenvo
 ## Como funciona
 É um contador de cliques temático que utiliza `localStorage` para armazenar a quantidade de cookies no navegador.
 
-Ilustrado por Maria Luiza
+Ilustrado por @ml-limx
