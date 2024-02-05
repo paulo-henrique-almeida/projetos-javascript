@@ -4,12 +4,15 @@
     0% {
         transform: scale(1);
     }
+
     33.33% {
         transform: scale(1.05);
     }
+
     66.66% {
         transform: scale(1);
     }
+
     100% {
         transform: scale(1.1);
     }
@@ -19,12 +22,15 @@
     0% {
         transform: scale(1.1);
     }
+
     33.33% {
         transform: scale(1);
     }
+
     66.66% {
         transform: scale(1.05);
     }
+
     100% {
         transform: scale(1);
     }
@@ -35,6 +41,7 @@
         width: 0vw;
         height: 0vh;
     }
+
     to {
         width: 50%;
         height: auto;
@@ -46,23 +53,9 @@
     from {
         margin-bottom: -20vh;
     }
+
     to {
         margin-bottom: 0vh;
-    }
-}
-
-@keyframes balanca {
-    0% {
-        transform: rotate(0deg);
-    }
-    33.33% {
-        transform: rotate(.5deg);
-    }
-    66.66% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(-.5deg);
     }
 }
 
@@ -71,9 +64,11 @@
     0% {
         text-shadow: 0px 0px 0px white;
     }
+
     70% {
         text-shadow: 0px 0px 8px white;
     }
+
     100% {
         text-shadow: 0px 0px 8px white;
     }
@@ -81,8 +76,7 @@
 
 /* Estilo do body */
 body {
-    background-image: url("imagens/papel_de_parede.png");
-    font-size: 3vw;
+    background-image: url("../imagens/papel_de_parede.png");
     margin: 0 auto;
     overflow: hidden;
 }
@@ -96,6 +90,17 @@ body {
     margin-top: 5vh;
 }
 
+/* Estilo da imagem */
+.pai img {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+    height: auto;
+    margin-top: 5vh;
+    animation: diminui .5s forwards;
+    border-radius: 128px;
+}
+
 .pai img:hover {
     animation: aumenta .5s forwards;
 }
@@ -105,16 +110,6 @@ body {
     animation: cresce .5s forwards;
 }
 
-/* Estilo da imagem */
-.pai img {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    height: auto;
-    margin-top: 5vh;
-    animation: diminui .5s forwards;
-    border-radius: 128px;
-}
 
 /* Estilo do contador */
 #cont {
@@ -124,16 +119,17 @@ body {
 
 /* Estilo do título */
 .titulo {
-    color: white;
-    width: 40vw;
-    height: 7.5vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0,0.4);
+    color: white;
+    width: 40vw;
+    height: 7.5vh;
+    background: rgba(0, 0, 0, 0.4);
     border-radius: 20px;
     text-shadow: 1px 0px 0px #000, -1px 0px 0px #000, 0px 1px 0px #000, 0px -1px 0px #000, 0px 1px 4px #000;
     white-space: nowrap;
+    font-size: 2.5em;
 }
 
 .titulo:hover {
