@@ -1,19 +1,16 @@
-# jogo_da_cobrinha
-
+# 🐍 Jogo Da Cobrinha
 
 Jogo da cobrinha desenvolvido em JavaScript
 Aprendi alguns conceitos interessantes enquanto desenvolvia esse projeto
 
-## Controles
+## 🎮 Controles
 Utilizar as teclas:
 - Seta para cima: ↑
 - Seta para a esquerda: ←
 - Seta para baixo: ↓
 - Seta para a direita: →
 
-## Como funciona
-
-## Conceitos utilizados
+## 📝 Conceitos utilizados
 - [x] Tag `canvas` do HTML
 - [x] Códigos responsivos
 
