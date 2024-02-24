@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/imagens/icones/favicon.png" type="image/x-icon">
+    <title>Calendário de Eventos</title>
+</head>
+<body>
+    
+    <div class="planejamento">
+        <h1>Calendário de Eventos</h1>
+        <h2 id="mes">Mês</h2>
+
+        <div id="calendario" class="grade-calendario"></div>
+    </div>
+
+    <button class="btn-add-evento" onclick="mostrarAddEventoModal()">Adicionar Evento</button>
+
+    <div id="add-evento-modal" class="modal">
+        <div class="conteudo-modal">
+            <span class="fechar" onclick="fecharAddEventoModal()">&times;</span>
+
+            <h2>Adicionar Evento</h2>
+
+            <input type="date" id="data-evento">
+
+            <input type="text" id="desc-evento" placeholder="Descrição do Evento">
+
+            <button onclick="addEvento()">Adicionar Evento</button>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

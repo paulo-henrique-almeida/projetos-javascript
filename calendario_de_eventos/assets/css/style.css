@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100%;
+    background-color: #121212;
+    color: #fff;
+}
+
+.planejamento {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+.grade-calendario {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+    padding: 20px;
+}
+
+.btn-add-evento {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #ffffff;
+    background-color: #222;
+    padding: 10px 48px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .2);
+    transition: all .3s ease;
+}
+
+.dia-calendario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #222222;
+    color: #c4c4c4;
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 70px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, .1);
+}
+
+.evento {
+    background-color: #212121;
+    color: #ffffff;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 4px;
+    text-align: center;
+    word-break: break-word;
+    font-size: .8em;
+    width: 80%;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.evento:hover,
+.conteudo-modal button:hover,
+.btn-add-evento:hover {
+    background-color: #404040;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.conteudo-modal {
+    background-color: #151515;
+    color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888888;
+    width: 300px;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.fechar {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.fechar:hover,
+.fechar:focus {
+    color: #ffffff;
+}
+
+input[type="date"],
+input[type="text"] {
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0px;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    outline: none;
+    box-sizing: border-box
+}
+
+.conteudo-modal button {
+    background-color: #212121;
+    color: #ffffff;
+    padding: 10px 48px;
+    margin: 8px 0px;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+/* media queries */
+
+@media screen and (max-width: 1200px) {
+    .grade-calendario {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .grade-calendario {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .grade-calendario {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .grade-calendario {
+        grid-template-columns: 1fr;
+    }
+}
