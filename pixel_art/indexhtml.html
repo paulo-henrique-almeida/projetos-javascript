@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/imagens/icones/favicon.png" type="image/x-icon">
     <title>Pixel Art</title>
 </head>
 <body>
@@ -13,22 +14,22 @@
             <div class="opcao-wrapper">
                 <div class="deslizante">
                     <label for="largura-delizante">Largura da Tela</label>
-                    <input type="range" id="largura" min="1">
-                    <span id="valor-largura">00</span>
+                    <input type="range" id="largura" min="1" max="35">
+                    <span id="valor-largura">01</span>
                 </div> <!-- deslizante -->
 
                 <div class="deslizante">
                     <label for="altura-delizante">Altura da Tela</label>
-                    <input type="range" id="altura" min="1">
-                    <span id="valor-altura">00</span>
+                    <input type="range" id="altura" min="1" max="35">
+                    <span id="valor-altura">01</span>
                 </div> <!-- deslizante -->
             </div> <!-- opcao wrapper -->
 
             <div class="opcao-wrapper">
                 <button id="btn-criar-grade">Criar Tela</button>
-                <button id="btn-limpar-grade">Excluir Tela</button>
+                <button id="btn-limpar-grade">Limpar Tela</button>
                 <input type="color" id="input-cor">
-                <button id="btn-limpar">Limpar Tela</button>
+                <button id="btn-apagar">Apagar</button>
                 <button id="btn-pintar">Pintar</button>
             </div> <!-- opcao wrapper-->
         </div> <!-- opcoes -->
