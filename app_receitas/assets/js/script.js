@@ -8,13 +8,6 @@ const apiUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 
 btnPesquisar.addEventListener('click', pesquisarComida);
 
-inputPesquisar.addEventListener('keydown', function (e) {
-    if (e.keyCode === 13) {
-        e.preventDefault();
-        pesquisarComida();
-    }
-});
-
 function pesquisarComida() {
     const pesquisa = inputPesquisar.value.trim();
 
@@ -69,13 +62,13 @@ function pesquisarComida() {
         });
 }
 
-function obterIngredientes() {
+function obterIngredientes(prato) {
     let ingredients = '';
-    for (let i = 0; i <= 20; i++) {
-        const ingrediente = prato[`strIngredients${i}`];
+    for (let i = 1; i <= 20; i++) {
+        const ingrediente = prato[`strIngredient${i}`];
         if (ingrediente) {
             const medida = prato[`strMeasure${i}`];
-            ingredients += `<li>${medida} ${ingrediente}`;
+            ingredients += `<li>${medida} ${ingrediente}</li>`;
         } else {
             break;
         }

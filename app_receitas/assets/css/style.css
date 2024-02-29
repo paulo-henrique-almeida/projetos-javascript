@@ -1,15 +1,16 @@
 :root {
     --escuro-fundo: #1c1917;
-    --amarelo-principal: #ffb92a;
+    --amarelo-principal: #f0ad28;
 
-    --amarelo-hover: #e69b00;
+    --amarelo-hover: #d4910b;
     --container: #1e293b;
     --pesquisar: #dddddd;
     --sombra: rgba(0, 0, 0, .323);
 
     --vermelho: #ff4a2a;
-    --braco: #ffffff;
+    --branco: #ffffff;
     --cinza: #cccccc;
+    --preto: #000000;
 }
 
 * {
@@ -57,7 +58,7 @@ body {
     background-color: transparent;
     border: none;
     outline: none;
-    color: var(--braco);
+    color: var(--branco);
 }
 
 #input-pesquisar {
@@ -89,10 +90,11 @@ img {
 
 .detalhes {
     background-color: var(--amarelo-principal);
+    color: var(--branco);
     position: relative;
     text-align: center;
     padding: 10px 0px;
-    border-radius: 10px
+    border-radius: 10px;
 }
 
 .detalhes h2 {
@@ -105,11 +107,12 @@ img {
     font-weight: 400;
 }
 
-#mostrar-receita {
+#btn-mostrar-receita {
     position: relative;
     left: 76%;
     top: 24px;
     background-color: var(--amarelo-principal);
+    color: var(--branco);
     font-size: 15px;
     padding: 8px 12px;
     border: none;
@@ -136,10 +139,10 @@ img {
     word-wrap: break-word;
     padding: 40px 24px 24px;
     font-size: 14px;
-    color: var(--braco);
+    color: var(--branco);
 }
 
-#esconder-receita {
+#btn-esconder-receita {
     position: relative;
     top: 18px;
     left: 91%;
@@ -147,15 +150,26 @@ img {
     height: 28px;
     font-size: 15px;
     background-color: var(--amarelo-principal);
+    color: var(--branco);
     border: none;
     border-radius: 6px;
     cursor: pointer;
     transition: all .3s ease;
 }
 
-#mostrar-receita:hover,
-#esconder-receita:hover {
+#btn-esconder-receita i {
+    color: var(--branco);
+}
+
+#btn-mostrar-receita:hover,
+#btn-esconder-receita:hover {
     background-color: var(--amarelo-hover);
+    transform: scale(1.1)
+}
+
+#btn-mostrar-receita:active,
+#btn-esconder-receita:active {
+    transform: scale(.9);
 }
 
 ul {
@@ -163,6 +177,7 @@ ul {
     display: grid;
     grid-template-columns: auto auto;
     gap: 12px 16px;
+    justify-items: center;
     padding: 16px 0 0 18px;
     font-size: 15px;
     color: var(--cinza);
@@ -171,11 +186,11 @@ ul {
 
 #container-ingrediente h3 {
     text-align: center;
-    color: var(--braco);
+    color: var(--branco);
 }
 
 h3 {
-    color: var(--braco);
+    color: var(--branco);
 }
 
 /* media queires */
