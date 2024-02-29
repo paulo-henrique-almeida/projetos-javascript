@@ -107,10 +107,15 @@ img {
     font-weight: 400;
 }
 
-#btn-mostrar-receita {
-    position: relative;
-    left: 76%;
-    top: 24px;
+.botoes-receita {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+#btn-mostrar-receita,
+#btn-voltar {
     background-color: var(--amarelo-principal);
     color: var(--branco);
     font-size: 15px;
@@ -162,13 +167,15 @@ img {
 }
 
 #btn-mostrar-receita:hover,
-#btn-esconder-receita:hover {
+#btn-esconder-receita:hover,
+#btn-voltar:hover {
     background-color: var(--amarelo-hover);
     transform: scale(1.1)
 }
 
 #btn-mostrar-receita:active,
-#btn-esconder-receita:active {
+#btn-esconder-receita:active,
+#btn-voltar:active {
     transform: scale(.9);
 }
 

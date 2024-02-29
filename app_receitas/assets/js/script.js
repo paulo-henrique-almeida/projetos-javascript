@@ -8,6 +8,13 @@ const apiUrl = 'https://www.themealdb.com/api/json/v1/1/search.php?s=';
 
 btnPesquisar.addEventListener('click', pesquisarComida);
 
+inputPesquisar.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') {
+        e.preventDefault();
+        pesquisarComida();
+    }
+});
+
 function pesquisarComida() {
     const pesquisa = inputPesquisar.value.trim();
 
@@ -43,7 +50,10 @@ function pesquisarComida() {
                 <pre id='intrucoes'>${prato.strInstructions}</pre>
             </div>
 
-            <button id='btn-mostrar-receita'>Ver Receita</button>
+            <div class='botoes-receita'>
+            <button id='btn-voltar'>Voltar</button>
+                <button id='btn-mostrar-receita'>Ver Receita</button>
+            </div>
         `;
         resultado.innerHTML = receita;
 
@@ -54,6 +64,11 @@ function pesquisarComida() {
         btnMostrarReceita.addEventListener('click', mostrarReceita);
         containerPesquisa.style.opacity = '0';
         containerPesquisa.style.display = 'none';
+
+        const btnVoltar = document.getElementById('btn-voltar');
+        btnVoltar.addEventListener('click', () => {
+            window.location.href = 'index.html';
+        });
     })
         .catch(() => {
             containerPesquisa.style.opacity = '1';
